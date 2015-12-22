@@ -22,3 +22,25 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+.controller('mainController', function ($scope){
+  $scope.filter = 'None';
+
+  $scope.applyFilter = function (f){    
+    $scope.filter = f;
+    if(f === 'Vintage'){
+      Caman('#preview', function () {
+        this.greyscale();
+        this.contrast(5);
+        this.noise(3);
+        this.sepia(100);
+        this.channels({
+            red: 8,
+            blue: 2,
+            green: 4
+        });
+        this.gamma(0.87);
+        this.render();
+      });
+    }
+  }
+})

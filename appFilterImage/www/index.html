@@ -12,6 +12,8 @@
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
 
+    <script src="js/caman.min.js"></script>
+
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
@@ -23,7 +25,7 @@
   </head>
   <body ng-app="starter">
 
-    <ion-pane>
+    <ion-pane ng-controller="mainController">
       <div id="getcamera">
         <i class="icon ion-camera"></i>
       </div>
@@ -37,79 +39,79 @@
 
         <div id="filters">
           <ion-scroll direction="x" class="wide-as-needed">
-            <div class="filter">
-              <div class="desc">Nenhum</div>
+            <div class="filter" ng-class="{on: filter=='None'}" ng-click="applyFilter('None')">
+              <div class="desc">None</div>
               <img src="img/test.jpg">
             </div>
-            <div class="filter">
+            <div class="filter" ng-class="{on: filter=='Vintage'}" ng-click="applyFilter('Vintage')">
               <div class="desc">Vintage</div>
               <img src="img/test.jpg">
             </div>
-            <div class="filter">
+            <div class="filter" ng-class="{on: filter=='Lomo'}" ng-click="applyFilter('Lomo')">
               <div class="desc">Lomo</div>
               <img src="img/test.jpg">
             </div>
-            <div class="filter">
+            <div class="filter" ng-class="{on: filter=='Clarity'}" ng-click="applyFilter('Clarity')">
               <div class="desc">Clarity</div>
               <img src="img/test.jpg">
             </div>
-            <div class="filter">
+            <div class="filter" ng-class="{on: filter=='SinCity'}" ng-click="applyFilter('SinCity')">
               <div class="desc">SinCity</div>
               <img src="img/test.jpg">
             </div>
-            <div class="filter">
+            <div class="filter" ng-class="{on: filter=='Sunrise'}" ng-click="applyFilter('Sunrise')">
               <div class="desc">Sunrise</div>
               <img src="img/test.jpg">
             </div>
-            <div class="filter">
+            <div class="filter" ng-class="{on: filter=='CrossProcess'}" ng-click="applyFilter('CrossProcess')">
               <div class="desc">CrossProcess</div>
               <img src="img/test.jpg">
             </div>
-            <div class="filter">
+            <div class="filter" ng-class="{on: filter=='OrangePeel'}" ng-click="applyFilter('OrangePeel')">
               <div class="desc">OrangePeel</div>
               <img src="img/test.jpg">
             </div>
-            <div class="filter">
+            <div class="filter" ng-class="{on: filter=='Love'}" ng-click="applyFilter('Love')">
               <div class="desc">Love</div>
               <img src="img/test.jpg">
             </div>
-            <div class="filter">
+            <div class="filter" ng-class="{on: filter=='Grungy'}" ng-click="applyFilter('Grungy')">
               <div class="desc">Grungy</div>
               <img src="img/test.jpg">
             </div>
-            <div class="filter">
+            <div class="filter" ng-class="{on: filter=='Jarques'}" ng-click="applyFilter('Jarques')">
               <div class="desc">Jarques</div>
               <img src="img/test.jpg">
             </div>
-            <div class="filter">
+            <div class="filter" ng-class="{on: filter=='Pinhole'}" ng-click="applyFilter('Pinhole')">
               <div class="desc">Pinhole</div>
               <img src="img/test.jpg">
             </div>
-            <div class="filter">
+            <div class="filter" ng-class="{on: filter=='OldBoot'}" ng-click="applyFilter('OldBoot')">
               <div class="desc">OldBoot</div>
               <img src="img/test.jpg">
             </div>
-            <div class="filter">
+            <div class="filter" ng-class="{on: filter=='GlowingSun'}" ng-click="applyFilter('GlowingSun')">
               <div class="desc">GlowingSun</div>
               <img src="img/test.jpg">
             </div>
-            <div class="filter">
+            <div class="filter" ng-class="{on: filter=='HazyDays'}" ng-click="applyFilter('HazyDays')">
               <div class="desc">HazyDays</div>
               <img src="img/test.jpg">
             </div>
-            <div class="filter">
+            <div class="filter" ng-class="{on: filter=='HerMajesty'}" ng-click="applyFilter('HerMajesty')">
               <div class="desc">HerMajesty</div>
               <img src="img/test.jpg">
             </div>
-            <div class="filter">
+            <div class="filter" ng-class="{on: filter=='Nostalgia'}" ng-click="applyFilter('Nostalgia')">
               <div class="desc">Nostalgia</div>
               <img src="img/test.jpg">
             </div>
-            <div class="filter">
+            <div class="filter" ng-class="{on: filter=='Hemingway'}" ng-click="applyFilter('Hemingway')">
               <div class="desc">Hemingway</div>
               <img src="img/test.jpg">
             </div>
-            <div class="filter">
+            <div class="filter" ng-class="{on: filter=='Concentrate'}" ng-click="applyFilter('Concentrate')">
               <div class="desc">Concentrate</div>
               <img src="img/test.jpg">
             </div>
